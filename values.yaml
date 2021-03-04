@@ -1,0 +1,16 @@
+redmineUsername: admin
+updateStrategy:
+  type: Recreate
+ingress:
+  enabled: true
+  certManager: true
+  hostname: support.reach.apps.deustotech.eu
+  tls: true
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+
+persistence:
+  storageClass: longhorn
+  size: 2Gi
+
+
