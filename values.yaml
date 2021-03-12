@@ -18,3 +18,10 @@ smtpPort:
 smtpUser: 
 smtpPassword: 
 smtpTls: 
+
+image:
+  pullSecrets: 
+  - robot 
+  registry: registry.apps.deustotech.eu
+  repository: reach/redmine
+  tag: latest
