@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+  name: support.reach-incubator.eu
+spec:
+  rules:
+  - host: support.reach-incubator.eu
+    http:
+      paths:
+      - backend:
+          serviceName: redmine
+          servicePort: http-redmine
+  tls:
+  - hosts:
+    - support.reach-incubator.eu
+    secretName: support-reach-incubator-eu-cert
